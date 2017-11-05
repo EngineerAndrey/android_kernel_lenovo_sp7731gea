@@ -247,7 +247,7 @@ do {							\
 	return 0;
 }
 
-extern void __init ontim_init_machine(void);  //add by hzb
+//extern void __init ontim_init_machine(void);  //add by hzb
 
 static void __init sc8830_init_machine(void)
 {
@@ -261,7 +261,7 @@ static void __init sc8830_init_machine(void)
 	of_sprd_default_bus_lookup[2].phys_addr = 0x20500000;
 	of_sprd_default_bus_lookup[3].phys_addr = 0x20600000;
 	of_platform_populate(NULL, of_sprd_default_bus_match_table, of_sprd_default_bus_lookup, NULL);
-	ontim_init_machine();  //add by hzb
+	//ontim_init_machine();  //add by hzb
 	sprd_sr2351_vddwpa_ctrl_power_register();
 }
 
