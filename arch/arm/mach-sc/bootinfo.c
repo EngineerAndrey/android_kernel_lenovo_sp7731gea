@@ -8,7 +8,7 @@
 #include <video/mmp_disp.h>
 #include "../../../drivers/video/sprdfb/sprdfb_panel.h"
 
-extern u8 get_hardware_version();
+//extern u8 get_hardware_version();
 extern char lcd_name_from_uboot[50];
 extern int lcd_find_success;
 extern struct panel_spec lcd_detect_mipi_info;//add by liuwei
@@ -55,10 +55,10 @@ void itoa(int value, char *str)
 static ssize_t hardware_version_show(struct kobject *kobj, struct kobj_attribute *attr, char * buf)
 {
 	char *s = buf;
-	u8 hw_ver;
-	hw_ver=get_hardware_version();
-	s += sprintf(s, "%c\n", hw_ver+'0');
-
+	//u8 hw_ver;
+	//hw_ver=get_hardware_version();
+	//s += sprintf(s, "%c\n", hw_ver+'0');
+	s += sprintf(s,"_|_ :P");
 	return (s - buf);
 }
 
