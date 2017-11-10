@@ -11,7 +11,11 @@ else
 ifeq ($(CONFIG_MACH_SP7731GEA_HD),y)
 obj-y	+= flash_ktd267.o
 else
+ifeq ($(CONFIG_MACH_SP7731GEA_HD_A1000),y)
+obj-y	+= flash_ktd267.o
+else
 obj-y += flash_common.o
+endif
 endif
 endif
 endif
